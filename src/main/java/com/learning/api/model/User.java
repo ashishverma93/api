@@ -7,19 +7,22 @@ public class User {
     private String id;
     private String name;
     private String email;
-    private String department;
+    private String phone;
     private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
     private boolean status;
 
     public User() {
     }
 
-    public User(String id, String name, String email, String department, LocalDateTime createdAt, boolean status) {
+    public User(String id, String name, String email, String phone,
+                LocalDateTime createdAt, LocalDateTime updatedAt, boolean status) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.department = department;
+        this.phone = phone;
         this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
         this.status = status;
     }
 
@@ -47,12 +50,12 @@ public class User {
         this.email = email;
     }
 
-    public String getDepartment() {
-        return department;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public LocalDateTime getCreatedAt() {
@@ -61,6 +64,14 @@ public class User {
 
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     public boolean isStatus() {

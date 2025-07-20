@@ -1,24 +1,20 @@
 package com.learning.api.dto;
 
-import java.time.LocalDateTime;
-
 public class UserResponse {
 
     private String id;
     private String name;
     private String email;
-    private String department;
-    private LocalDateTime createdAt;
+    private String phone;
 
     public UserResponse() {
     }
 
-    public UserResponse(String id, String name, String email, String department, LocalDateTime createdAt) {
+    public UserResponse(String id, String name, String email, String phone) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.department = department;
-        this.createdAt = createdAt;
+        this.phone = phone;
     }
 
     public String getId() {
@@ -45,19 +41,11 @@ public class UserResponse {
         this.email = email;
     }
 
-    public String getDepartment() {
-        return department;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

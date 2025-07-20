@@ -4,15 +4,15 @@ public class UserRequest {
 
     private String name;
     private String email;
-    private String department;
+    private String phone;
 
     public UserRequest() {
     }
 
-    public UserRequest(String name, String email, String department) {
+    public UserRequest(String name, String email, String phone) {
         this.name = name;
         this.email = email;
-        this.department = department;
+        this.phone = phone;
     }
 
     public String getName() {
@@ -31,11 +31,11 @@ public class UserRequest {
         this.email = email;
     }
 
-    public String getDepartment() {
-        return department;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService {
         }
         existingUser.setName(request.getName());
         existingUser.setEmail(request.getEmail());
-        existingUser.setDepartment(request.getDepartment());
+        existingUser.setUpdatedAt(LocalDateTime.now());
         return mapToUserResponse(existingUser);
     }
 
@@ -88,12 +88,13 @@ public class UserServiceImpl implements UserService {
         return new User(UUID.randomUUID().toString(),
                 request.getName(),
                 request.getEmail(),
-                request.getDepartment(),
+                request.getPhone(),
                 LocalDateTime.now(),
+                null,
                 true);
     }
 
     private UserResponse mapToUserResponse(User user) {
-        return new UserResponse(user.getId(), user.getName(), user.getEmail(), user.getDepartment(), user.getCreatedAt());
+        return new UserResponse(user.getId(), user.getName(), user.getEmail(), user.getPhone());
     }
 }
